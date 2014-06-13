@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
     watch: {
       styles: {
-        files: ['public/styl/**/*.styl'],
+        files: ['public/stylus/**/*.styl'],
         tasks: ['stylus']
       },
       scripts: {

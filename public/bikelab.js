@@ -13,7 +13,7 @@ var renderComponent = function(model) {
 };
 
 var requestRides = function(userId, token) {
-  var url = '/api/rides?token=' + token + '&userid=' + userId;
+  var url = '/api/' + token + '/user/' + userId + '/rides';
 
   $.ajax({
     url: url,
@@ -21,7 +21,7 @@ var requestRides = function(userId, token) {
       renderComponent(data);
     },
     error: function(err) {
-      console.log(err);
+      console.error(err);
     }
   });
 };
@@ -41,8 +41,8 @@ $(document).ready(function() {
 /** @jsx React.DOM */
 
 var totalDistanceComponent = React.createClass({displayName: 'totalDistanceComponent',
-  componentWillMount: function() {
-    console.log(this.props.model);
+  componentDidMount: function() {
+    console.log(this.props.data);
   },
 
   render: function() {

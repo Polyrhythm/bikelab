@@ -11,10 +11,10 @@ app.use('/', express.static(path.join(__dirname, 'public/')));
 app.set('port', 8888);
 
 // routes
-app.get('api/rides', routes.api.getRides);
+app.get('/', routes.index);
+app.get('/api/:token/user/:userId/rides', routes.api.getRides);
 
-app.use(routes.index);
-
+// app.use(routes.index);
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));

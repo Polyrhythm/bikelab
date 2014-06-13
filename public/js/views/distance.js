@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 
 var totalDistanceComponent = React.createClass({
-  componentWillMount: function() {
-    console.log(this.props.model);
+  componentDidMount: function() {
+    console.log(this.props.data);
   },
 
   render: function() {
