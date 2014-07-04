@@ -4,9 +4,7 @@ var totalDistanceComponent = require('./views/distance');
 
 var renderComponent = function(model) {
   React.renderComponent(
-    <totalDistanceComponent
-      data={model}
-    />,
+    <totalDistanceComponent data={model}/>,
     $('.app')[0]
   );
 };
