@@ -3,14 +3,6 @@
   "author": "ryan jones",
   "version": "0.0.1",
   "dependencies": {
-    "express": "^4.4.2",
-    "ejs": "^1.0.0"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "postinstall": "./node_modules/grunt-cli/bin/grunt build"
-  },
-  "dependencies":{
     "grunt": "^0.4.5",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-contrib-stylus": "^0.17.0",
@@ -18,6 +10,11 @@
     "grunt-browserify": "^2.1.0",
     "nib": "^1.0.2",
     "grunt-react": "^0.8.2",
-    "grunt-cli": "^0.1.13"
+    "grunt-cli": "^0.1.13",
+    "express": "^4.6.1"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "postinstall": "./node_modules/grunt-cli/bin/grunt build"
   }
 }
