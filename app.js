@@ -8,7 +8,6 @@ var app = module.exports = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use('/', express.static(path.join(__dirname, 'public/')));
-app.set('port', 8888);
 
 // routes
 app.get('/', routes.index);
@@ -16,6 +15,6 @@ app.get('/api/:token/user/:userId/rides', routes.api.getRides);
 
 // app.use(routes.index);
 
-http.createServer(app).listen(app.get('port'), function() {
+http.createServer(app).listen(process.env.port || 8888, function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
