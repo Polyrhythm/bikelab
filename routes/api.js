@@ -3,7 +3,7 @@ var https = require('https');
 exports.getRides = function(req, res) {
   var token = req.params.token;
   var userId = req.params.userId;
-  
+
   var options = {
     hostname: 'cyclinganalytics.com',
     path: '/api/user/' + userId + '/rides',
@@ -21,6 +21,7 @@ exports.getRides = function(req, res) {
   request.end();
 
   request.on('error', function(err) {
+    console.log('YOU FUCKED UP:');
     console.error(err);
   });
 };
