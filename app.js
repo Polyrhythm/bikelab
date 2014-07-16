@@ -15,6 +15,6 @@ app.get('/api/:token/user/:userId/rides', routes.api.getRides);
 
 // app.use(routes.index);
 
-http.createServer(app).listen(process.env.port || 8888, function() {
+http.createServer(app).listen(process.env.PORT || 8888, function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
