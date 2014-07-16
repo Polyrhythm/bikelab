@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "postinstall": "grunt"
+    "postinstall": "./node_modules/grunt-cli/bin/grunt"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
