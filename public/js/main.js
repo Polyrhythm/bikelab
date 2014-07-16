@@ -27,7 +27,7 @@ var init = function() {
   var userId = '1683758';
   var token = '7yB05YjPVp1o9S1SZ1CbknGPKlHyvQab';
 
-  // requestRides(userId, token);
+  requestRides(userId, token);
 };
 
 $(document).ready(function() {
