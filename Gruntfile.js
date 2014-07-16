@@ -40,4 +40,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-react');
 
   grunt.registerTask('default', ['browserify', 'stylus', 'watch']);
+  grunt.registerTask('build', ['browserify', 'stylus']);
 };
