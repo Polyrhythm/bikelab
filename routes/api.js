@@ -5,7 +5,7 @@ exports.getRides = function(req, res) {
   var userId = req.params.userId;
 
   var options = {
-    hostname: 'cyclinganalytics.com',
+    hostname: 'www.cyclinganalytics.com',
     path: '/api/user/' + userId + '/rides',
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + token }
@@ -15,7 +15,7 @@ exports.getRides = function(req, res) {
     console.log('status code: ', res.statusCode);
 
     res.on('data', function(data) {
-      console.log(data);
+      console.log(data.toString());
     });
   });
   request.end();
