@@ -25,7 +25,7 @@ var requestRides = function(userId, token) {
 
 var init = function() {
   var userId = '1683758';
-  var token = '7yB05YjPVp1o9S1SZ1CbknGPKlHyvQab';
+  var token = 'bacd23e02a540a947a0b5394f8dd2742';
 
   requestRides(userId, token);
 };
